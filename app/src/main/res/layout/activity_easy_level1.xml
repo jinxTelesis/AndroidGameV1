@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EasyLevel1"
-    android:background="@drawable/stage1new">
+    android:background="@drawable/stage1">
 
     <LinearLayout
 
         android:id="@+id/linearLayout"
-        android:layout_width="615dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/sand"
         android:orientation="horizontal"

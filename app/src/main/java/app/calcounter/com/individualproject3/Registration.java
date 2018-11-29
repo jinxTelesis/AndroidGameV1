@@ -58,8 +58,8 @@ public class Registration extends AppCompatActivity {
 
     // test button
     //
-    @BindView(R.id.btntest1ID)Button btnTest1Check;
-    @BindView(R.id.btntest2ID)Button btnTest2Submit;
+    //@BindView(R.id.btntest1ID)Button btnTest1Check;
+    //@BindView(R.id.btntest2ID)Button btnTest2Submit;
 
 
 
@@ -272,51 +272,51 @@ public class Registration extends AppCompatActivity {
 
     }
 
-    @OnClick(R.id.btntest1ID)
-    public void checkRecord(View view)
-    {
-        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+//    @OnClick(R.id.btntest1ID)
+//    public void checkRecord(View view)
+//    {
+//        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+//
+//        String[] prof={RegisterContract.RegistrationEntry._ID, COL_ADULT_FIRST_NAME,COL_ADULT_LAST_NAME,COL_DATE_OF_BIRTH,
+//        COL_EMAILADDRESS,COL_ADULT_USERNAME,COL_ADULT_PASSWORD,COL_CHILD_NAME,COL_CHILD_USERNAME,COL_CHILD_PASSWORD};
+//
+//        Cursor cursor = db.query(TABLE_NAME, prof, null,null,null,null,null);
+//
+//        String str= "";
+//        while(cursor.moveToNext())
+//        {
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_ADULT_FIRST_NAME)) + "\t\t";
+//
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_ADULT_LAST_NAME))+ "\t\t";
+//
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_DATE_OF_BIRTH)) + "\t\t";
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_EMAILADDRESS))+ "\t\t";
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_ADULT_USERNAME)) + "\t\t";
+//
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_ADULT_PASSWORD))+ "\t\t";
+//
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_CHILD_NAME)) + "\t\t";
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_CHILD_USERNAME))+ "\t\t";
+//            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_CHILD_PASSWORD))+ "\t\t";
+//            str+= "/n";
+//
+//        }
+//
+//        cursor.close();
+//
+//        //meTAP.setText(str);
+//
+//        Context context = getApplicationContext();
+//        CharSequence text = str;
+//        int duration = Toast.LENGTH_LONG;
+//        // return what failed???
+//        // change that red
+//        Toast toast = Toast.makeText(context,text,duration);
+//        toast.show();
 
-        String[] prof={RegisterContract.RegistrationEntry._ID, COL_ADULT_FIRST_NAME,COL_ADULT_LAST_NAME,COL_DATE_OF_BIRTH,
-        COL_EMAILADDRESS,COL_ADULT_USERNAME,COL_ADULT_PASSWORD,COL_CHILD_NAME,COL_CHILD_USERNAME,COL_CHILD_PASSWORD};
-
-        Cursor cursor = db.query(TABLE_NAME, prof, null,null,null,null,null);
-
-        String str= "";
-        while(cursor.moveToNext())
-        {
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_ADULT_FIRST_NAME)) + "\t\t";
-
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_ADULT_LAST_NAME))+ "\t\t";
-
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_DATE_OF_BIRTH)) + "\t\t";
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_EMAILADDRESS))+ "\t\t";
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_ADULT_USERNAME)) + "\t\t";
-
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_ADULT_PASSWORD))+ "\t\t";
-
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_CHILD_NAME)) + "\t\t";
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_CHILD_USERNAME))+ "\t\t";
-            str+= cursor.getString(cursor.getColumnIndexOrThrow(COL_CHILD_PASSWORD))+ "\t\t";
-            str+= "/n";
-
-        }
-
-        cursor.close();
-
-        //meTAP.setText(str);
-
-        Context context = getApplicationContext();
-        CharSequence text = str;
-        int duration = Toast.LENGTH_LONG;
-        // return what failed???
-        // change that red
-        Toast toast = Toast.makeText(context,text,duration);
-        toast.show();
 
 
-
-    }
+  //  }
 
 
 
