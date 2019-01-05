@@ -2,12 +2,14 @@ package app.calcounter.com.individualproject3;
 
 import android.provider.BaseColumns;
 
+/** google recommended contract
+ *  more or less constants that fill in a sqlLite
+ *  create table list, works similar to mySql
+ *
+ */
+
 public class RegisterContract {
-    /** google recommended contract
-     *  more or less constants that fill in a sqlLite
-     *  create table list, works similar to mySql
-     *
-     */
+
 
         private RegisterContract() {}
 

@@ -31,14 +31,16 @@ import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_4_S
 import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_5_SCORE;
 import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_6_SCORE;
 
+/** ParentsReport reads files to make a pie chart using the any chart api
+ *  the report in my other project individualProject4 makes more sense and
+ *  is a better formatted bar graph, this class was rushed to get the last 10/10
+ *  checklist done for a class and is not coded very well
+ *
+ */
+
 public class ParentsReport extends AppCompatActivity {
 
-    /** ParentsReport reads files to make a pie chart using the any chart api
-     *  the report in my other project individualProject4 makes more sense and
-     *  is a better formatted bar graph, this class was rushed to get the last 10/10
-     *  checklist done for a class and is not coded very well
-     *
-     */
+
 
     private SharedPreferences myPrefs;
     private String userKey;

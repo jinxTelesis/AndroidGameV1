@@ -11,12 +11,14 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/** DifSelection is just a menu activity it goes to
+ *  Either EasyLevel1 or HardLevel1
+ *
+ */
+
 public class DifSelection extends AppCompatActivity {
 
-    /** DifSelection is just a menu activity it goes to
-     *  Either EasyLevel1 or HardLevel1
-     *
-     */
+
 
     AudioClass myAudio;
     private MediaPlayer mediaPlayer;

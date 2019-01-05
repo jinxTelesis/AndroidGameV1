@@ -36,15 +36,17 @@ import static app.calcounter.com.individualproject3.RegisterContract.TABLE_NAME;
 // lights up in red if not
 // also will catch the Exceptions here rather than propagating them up
 
+/** Registration class fills in the attributes from
+ *  a number of text fields validation is removed
+ *  from previous projects uses sqlite
+ *  not a huge fan rather shared preferences or cloud storage
+ *
+ *
+ */
+
 public class Registration extends AppCompatActivity {
 
-    /** Registration class fills in the attributes from
-     *  a number of text fields validation is removed
-     *  from previous projects uses sqlite
-     *  not a huge fan rather shared preferences or cloud storage
-     *
-     *
-     */
+
 
     @BindView(R.id.regidbtn) Button mregBtn;
     private MediaPlayer mediaPlayer;

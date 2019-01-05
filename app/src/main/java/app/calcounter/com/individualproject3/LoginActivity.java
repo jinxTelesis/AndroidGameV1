@@ -27,13 +27,15 @@ import static app.calcounter.com.individualproject3.RegisterContract.Registratio
 import static app.calcounter.com.individualproject3.RegisterContract.RegistrationEntry.COL_EMAILADDRESS;
 import static app.calcounter.com.individualproject3.RegisterContract.TABLE_NAME;
 
+/** LoginActivity checks if the user name and password are in the list
+ *  of attributes in sqlite, I wouldn't write a login like this i would use firebase
+ *  or something else. But we had to use sqlite for class
+ *
+ */
+
 public class LoginActivity extends AppCompatActivity {
 
-    /** LoginActivity checks if the user name and password are in the list
-     *  of attributes in sqlite, I wouldn't write a login like this i would use firebase
-     *  or something else. But we had to use sqlite for class
-     *
-     */
+
 
     private MediaPlayer mediaPlayer;
 

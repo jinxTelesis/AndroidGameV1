@@ -12,14 +12,16 @@ import com.anychart.charts.Pie;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Simple test of AnyChart api, worked right away
+ * code left in not a part of running project
+ *
+
+ */
+
 public class ParentTest extends AppCompatActivity {
 
-    /**
-     * Simple test of AnyChart api, worked right away
-     * code left in not a part of running project
-     *
 
-     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
