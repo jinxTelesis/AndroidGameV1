@@ -21,6 +21,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static app.calcounter.com.individualproject3.Constants.Constant.CURPLAYER;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_2_SCORE;
+
 public class EasyLevel2 extends AppCompatActivity {
 
     private int startAnimationCounter = 0;
@@ -304,10 +307,10 @@ public class EasyLevel2 extends AppCompatActivity {
                         Intent previous = getIntent();
                         Bundle userbundle = previous.getExtras();
 
-                        myPrefs = getSharedPreferences(userbundle.getString("curplayer"),0);
+                        myPrefs = getSharedPreferences(userbundle.getString(CURPLAYER),0);
                         SharedPreferences.Editor editor = myPrefs.edit();
 
-                        editor.putInt("microbike", playerScore);
+                        editor.putInt(STAGE_2_SCORE, playerScore);
                         editor.apply();
 
                         Intent intent = new Intent(EasyLevel2.this,EasyLevel3.class);

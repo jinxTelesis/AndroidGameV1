@@ -1,5 +1,10 @@
 package app.calcounter.com.individualproject3.Controller;
 
+
+// simple login validation
+// should replace with firebase login etc
+
+
 public class LoginValidation {
 
     public boolean validateLogin(String u, String p)

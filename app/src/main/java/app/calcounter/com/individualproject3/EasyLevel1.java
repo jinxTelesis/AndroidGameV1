@@ -24,7 +24,25 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static app.calcounter.com.individualproject3.Constants.Constant.CURPLAYER;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_1_SCORE;
+
 public class EasyLevel1 extends AppCompatActivity {
+
+
+    /** EasyLevel1 is the first stage on easy mode it has 4 drag and drop buttons
+     *  if the player drags the correct buttons onto the blank button fields
+     *  then a traversal starts which is stored as an animation set
+     *  the animations are done as a percentage of the screen
+     *  this should be measured in a professional class but was roughly done for
+     *  class work the drag listeners take in the event info to check if the player
+     *  dragged the correct button symbol over
+     *
+     *  if the correct selections are made this activity will pass the score
+     *  to the next activity EasyLevel2
+     *
+     *
+     */
 
     private SharedPreferences myPrefs;
     private MediaPlayer mediaPlayer;
@@ -278,10 +296,10 @@ public class EasyLevel1 extends AppCompatActivity {
                         Intent previous = getIntent();
                         Bundle userbundle = previous.getExtras();
 
-                        myPrefs = getSharedPreferences(userbundle.getString("curplayer"),0);
+                        myPrefs = getSharedPreferences(userbundle.getString(CURPLAYER),0);
                         SharedPreferences.Editor editor = myPrefs.edit();
 
-                        editor.putInt("waffle", playerScore);
+                        editor.putInt(STAGE_1_SCORE, playerScore);
                         editor.apply();
 
 
@@ -313,6 +331,4 @@ public class EasyLevel1 extends AppCompatActivity {
             super.onDrawShadow(canvas);
         }
     }
-
-
 }

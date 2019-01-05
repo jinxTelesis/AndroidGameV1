@@ -21,6 +21,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static app.calcounter.com.individualproject3.Constants.Constant.CURPLAYER;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_3_SCORE;
+
 public class EasyLevel3 extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
@@ -261,10 +264,10 @@ public class EasyLevel3 extends AppCompatActivity {
                         Intent previous = getIntent();
                         Bundle userbundle = previous.getExtras();
 
-                        myPrefs = getSharedPreferences(userbundle.getString("curplayer"),0);
+                        myPrefs = getSharedPreferences(userbundle.getString(CURPLAYER),0);
                         SharedPreferences.Editor editor = myPrefs.edit();
 
-                        editor.putInt("stage3score", playerScore);
+                        editor.putInt(STAGE_3_SCORE, playerScore);
                         editor.apply();
 
                         Intent intent = new Intent(EasyLevel3.this,ChildScore.class);

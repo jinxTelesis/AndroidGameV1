@@ -24,6 +24,13 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_1_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_2_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_3_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_4_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_5_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_6_SCORE;
+
 public class ParentsReport extends AppCompatActivity {
 
     private SharedPreferences myPrefs;
@@ -52,14 +59,14 @@ public class ParentsReport extends AppCompatActivity {
                 //Log.e("currentplay value",userbundle.getString("curplayer"));
                 SharedPreferences.Editor editor = myPrefs.edit();
 
-                int tempscore1 = (myPrefs.getInt("waffle",0));
-                Log.e("value you want", Integer.toString(myPrefs.getInt("waffle",0)));
-                int tempscore2 = (myPrefs.getInt("microbike",0));
-                int tempscore3 = (myPrefs.getInt("stage3score",0));
+                int tempscore1 = (myPrefs.getInt(STAGE_1_SCORE,0));
+                Log.e("value you want", Integer.toString(myPrefs.getInt(STAGE_1_SCORE,0)));
+                int tempscore2 = (myPrefs.getInt(STAGE_2_SCORE,0));
+                int tempscore3 = (myPrefs.getInt(STAGE_3_SCORE,0));
 
-                int tempscore4 = (myPrefs.getInt("stage4score",0));
-                int tempscore5 = (myPrefs.getInt("stage5score", 0));
-                int tempscore6 = (myPrefs.getInt("stage6score",0));
+                int tempscore4 = (myPrefs.getInt(STAGE_4_SCORE,0));
+                int tempscore5 = (myPrefs.getInt(STAGE_5_SCORE, 0));
+                int tempscore6 = (myPrefs.getInt(STAGE_6_SCORE,0));
 
                 Pie pie = AnyChart.pie();
 
@@ -82,39 +89,8 @@ public class ParentsReport extends AppCompatActivity {
         {
 
 
-            //chartList.add(new Chart(resources.getString(R.string.column_chart), ColumnChartActivity.class));
-
-//            Cartesian my = AnyChart.column();
-//            List<DataEntry> data = new ArrayList<>();
-//            data.add(new ValueDataEntry("Stage1", tempscore1));
-//            data.add(new ValueDataEntry("Stage2",tempscore2));
-//            data.add(new ValueDataEntry("Stage3", tempscore3));
-//            data.add(new ValueDataEntry("Stage4", tempscore4));
-//            data.add(new ValueDataEntry("Stage5",tempscore5));
-//            data.add(new ValueDataEntry("Stage6",tempscore6));
-//            my.data(data);
-//            AnyChartView anyChartView = (AnyChartView) findViewById(R.id.any_chart_view);
-//            anyChartView.setChart(my);
-
 
         }
 
-
-
-
-
-
-
-//        Pie pie = AnyChart.pie();
-//
-//        List<DataEntry> data = new ArrayList<>();
-//        data.add(new ValueDataEntry("John",10000));
-//        data.add(new ValueDataEntry("Jake", 12000));
-//        data.add(new ValueDataEntry( "Peter", 18000));
-//
-//        pie.data(data);
-//
-//        AnyChartView anyChartView = (AnyChartView) findViewById(R.id.any_chart_view);
-//        anyChartView.setChart(pie);
     }
 }

@@ -16,7 +16,18 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static app.calcounter.com.individualproject3.Constants.Constant.CURPLAYER;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_1_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_2_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_3_SCORE;
+
+/** this activity just reads in scores
+ *
+ */
+
 public class ChildScore extends AppCompatActivity {
+
+
 
     private MediaPlayer mediaPlayer;
     @BindView(R.id.textViewChildScore1)TextView score1TV;
@@ -40,15 +51,19 @@ public class ChildScore extends AppCompatActivity {
         Bundle userbundle = previous.getExtras();
         ButterKnife.bind(this);
 
-        myPrefs = getSharedPreferences(userbundle.getString("curplayer"),0);
+        myPrefs = getSharedPreferences(userbundle.getString(CURPLAYER),0);
         //Log.e("currentplay value",userbundle.getString("curplayer"));
         SharedPreferences.Editor editor = myPrefs.edit();
 
         //Log.e("score value", Integer.toString(myPrefs.getInt("stage1score",0)));
 
-        String tempscore1 = Integer.toString(myPrefs.getInt("waffle",0));
-        String tempscore2 = Integer.toString(myPrefs.getInt("microbike",0));
-        String tempscore3 = Integer.toString(myPrefs.getInt("stage3score",0));
+        //String tempscore1 = Integer.toString(myPrefs.getInt("waffle",0));
+
+        String tempscore1 = Integer.toString(myPrefs.getInt(STAGE_1_SCORE,0));
+
+
+        String tempscore2 = Integer.toString(myPrefs.getInt(STAGE_2_SCORE,0));
+        String tempscore3 = Integer.toString(myPrefs.getInt(STAGE_3_SCORE,0));
 
         if(tempscore1 != null)
         {
@@ -76,44 +91,6 @@ public class ChildScore extends AppCompatActivity {
         {
             score1TV.setText("zero");
         }
-
-
-
-//                topScoreSoFar = myPrefs.getString("TopScore",null);
-//        secondScore = myPrefs.getString("SecondScore", null);
-//        thirdScore = myPrefs.getString("ThirdScore",null);
-//
-//        if(topScoreSoFar != null)
-//        {
-//            tVScore1.setText(topScoreSoFar);
-//        }
-//        else
-//        {
-//            tVScore1.setText("0");
-//        }
-
-
-//        try{
-//            score1TV.setText("stage 1 score: " + Integer.toString(myPrefs.getInt("stage1score",0)));
-//        } catch (Exception e)
-//        {
-//
-//        }
-//
-//        try{
-//            score2TV.setText("stage 2 score: " + Integer.toString(myPrefs.getInt("stage2score",0)));
-//        } catch (Exception e)
-//        {
-//
-//        }
-//
-//        try
-//        {
-//            score2TV.setText("stage 3 score: " + Integer.toString(myPrefs.getInt("stage3score",0)));
-//        } catch(Exception e)
-//        {
-//
-//        }
     }
 
     @OnClick(R.id.child_score_exitid)
@@ -133,9 +110,5 @@ public class ChildScore extends AppCompatActivity {
         finish();
         startActivity(intent);
 
-
-
     }
-
-
 }

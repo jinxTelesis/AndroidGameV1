@@ -13,6 +13,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static app.calcounter.com.individualproject3.Constants.Constant.CURPLAYER;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_4_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_5_SCORE;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_6_SCORE;
+
 public class ChildScoreHard extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
@@ -39,12 +44,12 @@ public class ChildScoreHard extends AppCompatActivity {
         Intent previous = getIntent();
         Bundle userbundle = previous.getExtras();
 
-        myPrefs = getSharedPreferences(userbundle.getString("curplayer"),0);
+        myPrefs = getSharedPreferences(userbundle.getString(CURPLAYER),0);
         SharedPreferences.Editor editor = myPrefs.edit();
 
-        score4.setText("stage 4 score: " + myPrefs.getInt("stage4score",0));
-        score5.setText("stage 5 score: " + myPrefs.getInt("stage5score",0));
-        score6.setText("stage 6 score: " + myPrefs.getInt("stage6score",0));
+        score4.setText("stage 4 score: " + myPrefs.getInt(STAGE_4_SCORE,0));
+        score5.setText("stage 5 score: " + myPrefs.getInt(STAGE_5_SCORE,0));
+        score6.setText("stage 6 score: " + myPrefs.getInt(STAGE_6_SCORE,0));
 
 
     }

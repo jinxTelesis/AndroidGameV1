@@ -21,6 +21,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static app.calcounter.com.individualproject3.Constants.Constant.CURPLAYER;
+import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_6_SCORE;
+
 public class HardLevel3 extends AppCompatActivity {
 
     StrtDrgLsntr strtDrgLsntr;
@@ -389,10 +392,10 @@ public class HardLevel3 extends AppCompatActivity {
                         Intent previous = getIntent();
                         Bundle userbundle = previous.getExtras();
 
-                        myPrefs = getSharedPreferences(userbundle.getString("curplayer"),0);
+                        myPrefs = getSharedPreferences(userbundle.getString(CURPLAYER),0);
                         SharedPreferences.Editor editor = myPrefs.edit();
 
-                        editor.putInt("stage6score", playerScore);
+                        editor.putInt(STAGE_6_SCORE, playerScore);
                         editor.apply();
 
                         Intent intent = new Intent(HardLevel3.this,ChildScoreHard.class);

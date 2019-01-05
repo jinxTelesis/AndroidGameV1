@@ -15,6 +15,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static app.calcounter.com.individualproject3.Constants.Constant.CURPLAYER;
 import static app.calcounter.com.individualproject3.RegisterContract.RegistrationEntry.COL_ADULT_FIRST_NAME;
 import static app.calcounter.com.individualproject3.RegisterContract.RegistrationEntry.COL_ADULT_LAST_NAME;
 import static app.calcounter.com.individualproject3.RegisterContract.RegistrationEntry.COL_ADULT_PASSWORD;
@@ -120,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(validChildLogin == 2)
                 {
                     Bundle bundle = new Bundle();
-                    bundle.putString("curplayer", testUsernameStr);
+                    bundle.putString(CURPLAYER, testUsernameStr);
 
                     Intent intent = new Intent(LoginActivity.this, DifSelection.class);
                     intent.putExtras(bundle);
