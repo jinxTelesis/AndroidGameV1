@@ -28,8 +28,4 @@ public class StudentDbHelper extends SQLiteOpenHelper {
         onUpgrade(db, oldVersion, newVersion);
     }
 
-    //public void onDelete(SQLiteDatabase db) {db.delete(TABLE_NAME, SQL_DELETE_ENTRIES, };
-
-
-
 }

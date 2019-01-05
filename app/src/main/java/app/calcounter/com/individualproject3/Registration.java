@@ -38,6 +38,14 @@ import static app.calcounter.com.individualproject3.RegisterContract.TABLE_NAME;
 
 public class Registration extends AppCompatActivity {
 
+    /** Registration class fills in the attributes from
+     *  a number of text fields validation is removed
+     *  from previous projects uses sqlite
+     *  not a huge fan rather shared preferences or cloud storage
+     *
+     *
+     */
+
     @BindView(R.id.regidbtn) Button mregBtn;
     private MediaPlayer mediaPlayer;
 
@@ -96,9 +104,10 @@ public class Registration extends AppCompatActivity {
         mDbHelper = new StudentDbHelper(this);
 
 
-
-
-
+        /** this entire setOnClickListener check validates that there is data
+         *  in the text fields
+         *
+         */
 
 
         mregBtn.setOnClickListener(new View.OnClickListener() {
@@ -264,6 +273,10 @@ public class Registration extends AppCompatActivity {
         });
 
     }
+
+    //*****************************
+    // submitRecord creates and instance of dbHelper then puts the values from the various text fields
+    // it is called from within the listener above
 
 
     public void submitRecord()

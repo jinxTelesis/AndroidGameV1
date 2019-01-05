@@ -18,6 +18,10 @@ import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_4_S
 import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_5_SCORE;
 import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_6_SCORE;
 
+/** this activity just reads in scores
+ *
+ */
+
 public class ChildScoreHard extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;

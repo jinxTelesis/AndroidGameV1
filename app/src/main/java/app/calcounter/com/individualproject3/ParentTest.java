@@ -14,6 +14,13 @@ import java.util.List;
 
 public class ParentTest extends AppCompatActivity {
 
+    /**
+     * Simple test of AnyChart api, worked right away
+     * code left in not a part of running project
+     *
+
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

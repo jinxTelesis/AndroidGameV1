@@ -58,8 +58,10 @@ public class EasyLevel1 extends AppCompatActivity {
 
     StrtDrgLsntr strtDrgLsntr;
     EndDrgLsntr endDrgLsntr;
-    @BindView(R.id.stage1ewokID)ImageView ewok;
+    @BindView(R.id.stage1ewokID)ImageView ewok; // character or sprite
     @BindView(R.id.stage1buttonExit)Button exit;
+
+
 
     private AnimationSet fullAnimation;
 
@@ -75,7 +77,7 @@ public class EasyLevel1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // restart intent
+
 
         mediaPlayer = new MediaPlayer();
         mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.backgroundmusic);
@@ -88,6 +90,12 @@ public class EasyLevel1 extends AppCompatActivity {
         fullAnimation = new AnimationSet(true);
 
         mediaPlayer = new MediaPlayer();
+
+        // ***********************************************************************
+        // hack solution to get window size does not measure stuff like action bar
+        // break screen down into ratios
+        // seems to scale reasonably to other devices
+        // ***********************************************************************
 
 
         Display display = getWindowManager().getDefaultDisplay();
@@ -104,23 +112,34 @@ public class EasyLevel1 extends AppCompatActivity {
         strtDrgLsntr = new StrtDrgLsntr();
         endDrgLsntr = new EndDrgLsntr();
 
+        //**********************************************
+        // these are the click listeners for the buttons
+
         findViewById(R.id.stage1buttonRightID).setOnLongClickListener(strtDrgLsntr);
         findViewById(R.id.stage1buttonLeftID).setOnLongClickListener(strtDrgLsntr);
         findViewById(R.id.stage1buttonDownID).setOnLongClickListener(strtDrgLsntr);
         findViewById(R.id.stage1buttonUpID).setOnLongClickListener(strtDrgLsntr);
+
+        //***********************************************
+        // drag listeners waiting for the correct button type to be dragged over
+        // will accept the wrong button type which is intended
+        // uses clip data to pass the actual information
 
         findViewById(R.id.stage1button1).setOnDragListener(endDrgLsntr);
         findViewById(R.id.stage1button2).setOnDragListener(endDrgLsntr);
         findViewById(R.id.stage1button3).setOnDragListener(endDrgLsntr);
         findViewById(R.id.stage1button4).setOnDragListener(endDrgLsntr);
 
-        //ToDO need to put this in control logic also
+        //***************************************************************
+        // the screen is grid like so one transaltion is done at a time
+        // for the most part
+
         move1 = new TranslateAnimation(0, moveSize1, 0,0);
         move1.setDuration(5000);
         move1.setFillAfter(true);
         fullAnimation.addAnimation(move1);
 
-        // move two
+
         move2 = new TranslateAnimation(0,0,0,moveSize2);
         move2.setDuration(5000);
         move2.setFillAfter(true);
@@ -148,18 +167,18 @@ public class EasyLevel1 extends AppCompatActivity {
         move5.setFillAfter(true);
 
 
-
-
     }
 
-    // this button exits the game without saving score
-    // might change that
+    //*******************************
+    // exit button
+
     @OnClick(R.id.stage1buttonExit)
     public void exitGame(View view)
     {
         this.finishAffinity();
     }
 
+    //**************************************************
     // this button replays level without saving score
     @OnClick(R.id.stage1buttonReplay)
     public void restartLevel(View view)
@@ -167,6 +186,12 @@ public class EasyLevel1 extends AppCompatActivity {
         finish();
         startActivity(restartIntent);
     }
+
+
+    //*************************************************************
+    // drag listeners with the clip data
+    // info sent with the clip data and that also tests
+    // if correct move was made
 
     private class StrtDrgLsntr implements View.OnLongClickListener{
 
@@ -177,6 +202,7 @@ public class EasyLevel1 extends AppCompatActivity {
 
             if(v.getId() == R.id.stage1buttonDownID)
             {
+                // this is the specific clip data
                 ClipData data = ClipData.newPlainText("senderdown", "down");
                 v.startDrag(data,withShadow,v,0);
 
@@ -184,30 +210,33 @@ public class EasyLevel1 extends AppCompatActivity {
 
             if(v.getId() == R.id.stage1buttonUpID)
             {
+                // this is the specific clip data
                 ClipData data = ClipData.newPlainText("senderup", "up");
                 v.startDrag(data,withShadow,v,0);
             }
 
             if(v.getId() == R.id.stage1buttonRightID)
             {
+                // this is the specific clip data
                 ClipData data = ClipData.newPlainText("senderright","right");
                 v.startDrag(data,withShadow,v,0);
             }
 
             if(v.getId() == R.id.stage1buttonLeftID)
             {
+                // this is the specific clip data
                 ClipData data = ClipData.newPlainText("senderleft","left");
-
                 v.startDrag(data,withShadow,v,0);
             }
-
-
 
             //Log.e("output",data.toString());
             return false;
         }
     }
 
+    //**********************************************************
+    // end of drag listeners determines if the correct button
+    // was dragged over
 
     private class EndDrgLsntr implements View.OnDragListener{
 
@@ -218,9 +247,11 @@ public class EasyLevel1 extends AppCompatActivity {
 
                 if(v.getId() == R.id.stage1button1)
                 {
+                    // this is storing the actual clip data
                     ClipData s = event.getClipData();
                     String s1 = (String) s.getItemAt(0).getText();
 
+                    // test if it is the correct button
                     if(s1.equals("down"))
                     {
                         if(firstTime1) // prevents cheating
@@ -236,9 +267,11 @@ public class EasyLevel1 extends AppCompatActivity {
 
                 if(v.getId() == R.id.stage1button2)
                 {
+                    // this is storing the actual clip data
                     ClipData s = event.getClipData();
                     String s1 = (String) s.getItemAt(0).getText();
 
+                    // test if it is the correct button
                     if(s1.equals("right"))
                     {
                         if(firstTime2) // prevents cheating
@@ -252,9 +285,11 @@ public class EasyLevel1 extends AppCompatActivity {
 
                 if(v.getId() == R.id.stage1button3)
                 {
+                    // this is storing the actual clip data
                     ClipData s = event.getClipData();
                     String s1 = (String) s.getItemAt(0).getText();
 
+                    // test if it is the correct button
                     if(s1.equals("up"))
                     {
                         if(firstTime3) // prevents cheating
@@ -268,9 +303,11 @@ public class EasyLevel1 extends AppCompatActivity {
 
                 if(v.getId() == R.id.stage1button4)
                 {
+                    // this is storing the actual clip data
                     ClipData s = event.getClipData();
                     String s1 = (String) s.getItemAt(0).getText();
 
+                    // test if it is the correct button
                     if(s1.equals("right"))
                     {
                         if(firstTime4) // prevents cheating
@@ -281,8 +318,11 @@ public class EasyLevel1 extends AppCompatActivity {
                         }
                     }
                 }
-
             }
+
+            // **************************************************************************
+            // if the player picked all the correct values the next activity is started
+            // and the score data is passed in
 
             if(startAnimationCounter == 4)
             {

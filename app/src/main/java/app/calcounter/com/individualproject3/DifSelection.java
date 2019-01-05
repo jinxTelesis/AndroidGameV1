@@ -13,6 +13,11 @@ import butterknife.ButterKnife;
 
 public class DifSelection extends AppCompatActivity {
 
+    /** DifSelection is just a menu activity it goes to
+     *  Either EasyLevel1 or HardLevel1
+     *
+     */
+
     AudioClass myAudio;
     private MediaPlayer mediaPlayer;
 

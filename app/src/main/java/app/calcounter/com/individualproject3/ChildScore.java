@@ -22,7 +22,7 @@ import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_2_S
 import static app.calcounter.com.individualproject3.Constants.Constant.STAGE_3_SCORE;
 
 /** this activity just reads in scores
- *
+ * checks if file is null then reads
  */
 
 public class ChildScore extends AppCompatActivity {
