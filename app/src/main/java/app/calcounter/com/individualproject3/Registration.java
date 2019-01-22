@@ -111,6 +111,8 @@ public class Registration extends AppCompatActivity {
          *
          */
 
+        // == resets the text color after errors ==
+
         meTAFN.setOnFocusChangeListener((v,c)->{
             meTAFN.setTextColor(Color.BLACK);
             meTAFN.setText("");
