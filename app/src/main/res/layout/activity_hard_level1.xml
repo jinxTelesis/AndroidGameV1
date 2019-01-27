@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/sand"
+        android:background="@color/blueOp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
 
             android:layout_width="30dp"
             android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginLeft="6dp"
 
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -133,7 +133,7 @@
 
             android:layout_width="30dp"
             android:layout_height="38dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginEnd="30dp"
 
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
