@@ -7,252 +7,263 @@
     android:background="@drawable/stage6"
     tools:context=".HardLevel3">
 
-    <LinearLayout
-
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/blueOp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.008"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_height="43dp"
+        android:background="@color/white">
 
-        <Button
-            android:id="@+id/stage6button1"
+        <LinearLayout
 
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginLeft="6dp"
-
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginBottom="8dp"
+            android:background="@color/blueOp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.008"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/stage6button1"
+
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="6dp"
+
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
 
-        <Button
-            android:id="@+id/stage6button2"
+            <Button
+                android:id="@+id/stage6button2"
 
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
 
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.065"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.065"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/stage6button3"
+            <Button
+                android:id="@+id/stage6button3"
 
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
 
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.127"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.127"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/stage6button4"
+            <Button
+                android:id="@+id/stage6button4"
 
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
 
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.189"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/stage6button5"
+            <Button
+                android:id="@+id/stage6button5"
 
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
 
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.189"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/stage6button6"
+            <Button
+                android:id="@+id/stage6button6"
 
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
 
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.189"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/stage6button7"
+            <Button
+                android:id="@+id/stage6button7"
 
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
 
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.189"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/stage6button8"
+            <Button
+                android:id="@+id/stage6button8"
 
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="30dp"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="30dp"
 
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-
-        <Button
-            android:id="@+id/stage6buttonUpID"
-
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@drawable/arrowup"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.317"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/stage6buttonDownID"
-
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/downarrownew"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.383"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/stage6buttonLeftID"
-
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/arrowleft"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.448"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/stage6buttonRightID"
-
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/arrowright"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.514"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/stage6buttonLoopID"
-
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/arrowloop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.514"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/stage6buttonHaltID"
-
-            android:layout_width="30dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/arrowbreak"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.514"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/stage6buttonExit"
-            android:layout_width="48dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
-            android:text="Exit"
-            android:textSize="8sp" />
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.189"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
 
-        <Button
-            android:id="@+id/stage6buttonReplay"
-            android:layout_width="54dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="0dp"
-            android:text="Replay"
-            android:textSize="8sp" />
+            <Button
+                android:id="@+id/stage6buttonUpID"
+
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="8dp"
+
+                android:background="@drawable/arrowup"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.317"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/stage6buttonDownID"
+
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/downarrownew"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.383"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/stage6buttonLeftID"
+
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/arrowleft"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.448"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/stage6buttonRightID"
+
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/arrowright"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/stage6buttonLoopID"
+
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/arrowloop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/stage6buttonHaltID"
+
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/arrowbreak"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/stage6buttonExit"
+                android:layout_width="48dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
+                android:text="Exit"
+                android:textSize="8sp" />
 
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/stage6buttonReplay"
+                android:layout_width="54dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="0dp"
+                android:text="Replay"
+                android:textSize="8sp" />
+
+
+        </LinearLayout>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
 
     <ImageView
         android:id="@+id/stage6EwokID"
