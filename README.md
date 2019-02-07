@@ -7,7 +7,7 @@ graph.
 
 Easy level 2.
 
-![Android Game 2](EasyLeve2.png?raw=true "Easy Level 2")
+![Android Game 2](EasyLevel2.png?raw=true "Easy Level 2")
 
 Easy level 3.
 
